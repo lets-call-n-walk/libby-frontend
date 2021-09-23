@@ -59,4 +59,4 @@ jobs:
           app-name: 'libby'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2EABB264907F43CFB066AD1A881D645D }}
-          package: ./dist/libby
+          package: .
