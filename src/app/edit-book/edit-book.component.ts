@@ -15,7 +15,7 @@ export class EditBookComponent implements OnInit {
   constructor(private bookService: BookService, private route: ActivatedRoute, private router: Router) {
     this.route.params.subscribe((parameters) =>
       this.currentBook = bookService.getBook(parameters['id']))
-      router.navigate(['/books'])
+      
    }
 
   ngOnInit(): void {
@@ -23,7 +23,11 @@ export class EditBookComponent implements OnInit {
 
   UpdateBook()
   {
+    this.route.params.subscribe((parameters) =>
+      this.bookService.updateBook(parameters['id'], this.currentBook)
+    )
 
+    this.router.navigate(['/books'])
   }
 
 }

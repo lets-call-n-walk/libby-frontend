@@ -23,5 +23,10 @@ export class BookService {
     this.book_list.push(book)
   }
 
+  updateBook(id: number, book: Book)
+  {
+    this.book_list[id] = book
+  }
+
   constructor() { }
 }
