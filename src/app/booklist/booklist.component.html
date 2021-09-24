@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Details</th>
+    </tr>
+    <tr *ngFor="book in book-list; id in index">
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.catefory}}</td>
+        <td><a routerLink="/book/{{id}}">Details</a></td>
+    </tr>
+</table>
