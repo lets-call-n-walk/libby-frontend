@@ -13,5 +13,15 @@ export class BookService {
     return this.book_list
   }
 
+  getBook(id: number)
+  {
+    return this.book_list[id]
+  }
+  
+  addBook(book: Book)
+  {
+    this.book_list.push(book)
+  }
+
   constructor() { }
 }

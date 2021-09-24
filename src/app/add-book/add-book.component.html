@@ -1,0 +1,19 @@
+<form (ngSubmit)="AddBook()">
+    <label>Title:</label>
+    <br>
+    <input type="text" [(ngModel)]="newBook.title" name="title">
+    <br>
+    <label>Author:</label>
+    <br>
+    <input type="text" [(ngModel)]="newBook.author" name="author">
+    <br>
+    <label>Category:</label>
+    <br>
+    <input type="text" [(ngModel)]="newBook.category" name="category">
+    <br>
+    <label>Number of Holds:</label>
+    <br>
+    <input type="number"[(ngModel)]="newBook.numOfHolds" name="numOfHolds">
+    <br>
+    <button type="submit">Add Book</button>
+</form>
