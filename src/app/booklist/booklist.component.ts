@@ -18,4 +18,10 @@ export class BooklistComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  checkout(id: number)
+  {
+    this.book_list[id].checkedOut = !this.book_list[id].checkedOut
+    this.bookService.book_list = this.book_list
+  }
+
 }
