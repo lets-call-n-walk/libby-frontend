@@ -10,7 +10,7 @@ import { BookService } from '../book.service';
 })
 export class AddBookComponent implements OnInit {
 
-  newBook: Book = {title: "", author: "", category: "", numOfHolds: 0}
+  newBook: Book = {title: "", author: "", category: "", checkedOut: false}
 
   constructor(private bookService: BookService, private router: Router) { }
 

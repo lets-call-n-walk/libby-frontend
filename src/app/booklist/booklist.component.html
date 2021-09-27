@@ -4,14 +4,14 @@
         <th>Author</th>
         <th>Category</th>
         <th>Details</th>
-        <th>Edit</th>
+        <th>Check Out</th>
     </tr>
     <tr *ngFor="let book of book_list; let id = index">
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>{{book.category}}</td>
         <td><a routerLink="/book/{{id}}">Details</a></td>
-        <td><a routerLink="/editBook/{{id}}">Edit</a></td>
+        <td><a routerLink="#" *ngIf="!book.checkedOut">Check Out</a></td>
     </tr>
 </table>
 <a routerLink="/addBook">Add book</a>

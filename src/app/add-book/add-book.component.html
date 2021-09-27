@@ -11,9 +11,9 @@
     <br>
     <input type="text" [(ngModel)]="newBook.category" name="category">
     <br>
-    <label>Number of Holds:</label>
+    <label>Checked Out:</label>
     <br>
-    <input type="number"[(ngModel)]="newBook.numOfHolds" name="numOfHolds">
+    <input type="checkbox"[(ngModel)]="newBook.checkedOut" name="numOfHolds">
     <br>
     <button type="submit">Add Book</button>
 </form>

@@ -6,7 +6,7 @@ import { Book } from './book';
 })
 export class BookService {
 
-  book_list: Book[] = [{title: "Harry Potter", author: "JK Rowling", category: "Fantasy", numOfHolds: 1}]
+  book_list: Book[] = [{title: "Harry Potter", author: "JK Rowling", category: "Fantasy", checkedOut: false}]
 
   getBooks()
   {
