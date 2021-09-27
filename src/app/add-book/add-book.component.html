@@ -1,19 +1,19 @@
-<form (ngSubmit)="AddBook()">
+<form (ngSubmit)="AddBook()" class="form">
     <label>Title:</label>
     <br>
-    <input type="text" [(ngModel)]="newBook.title" name="title">
+    <input type="text" [(ngModel)]="newBook.title" name="title" class="form-control" required #titleRef="ngModel">
     <br>
     <label>Author:</label>
     <br>
-    <input type="text" [(ngModel)]="newBook.author" name="author">
+    <input type="text" [(ngModel)]="newBook.author" name="author" class="form-control" required #authorRef="ngModel">
     <br>
     <label>Category:</label>
     <br>
-    <input type="text" [(ngModel)]="newBook.category" name="category">
+    <input type="text" [(ngModel)]="newBook.category" name="category" class="form-control" required #categoryRef="ngModel">
     <br>
     <label>Checked Out:</label>
     <br>
-    <input type="checkbox"[(ngModel)]="newBook.checkedOut" name="checkedOut">
+    <input type="checkbox"[(ngModel)]="newBook.checkedOut" name="checkedOut" class="form-check-input">
     <br>
-    <button type="submit">Add Book</button>
+    <button type="submit" class="btn btn-outline-primary" [disabled]="(titleRef?.errors || authorRef?.errors || categoryRef?.errors)">Add Book</button>
 </form>

@@ -9,6 +9,7 @@ import { BookViewComponent } from './book-view/book-view.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { EditBookComponent } from './edit-book/edit-book.component';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { EditBookComponent } from './edit-book/edit-book.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

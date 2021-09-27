@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Book } from '../book';
 import { BookService } from '../book.service';
@@ -9,6 +10,12 @@ import { BookService } from '../book.service';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent implements OnInit {
+
+  BookForm = new FormGroup({
+    title: new FormControl('', [Validators.required]),
+    author: new FormControl('', [Validators.required]),
+    category: new FormControl('', [Validators.required])
+  })
 
   newBook: Book = {title: "", author: "", category: "", checkedOut: false}
 
