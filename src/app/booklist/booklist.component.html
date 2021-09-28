@@ -1,9 +1,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Category</th>
+            <th [appSort]="book_list" data-order="desc" data-name="title" scope="col">Title</th>
+            <th [appSort]="book_list" data-order="desc" data-name="author" scope="col">Author</th>
+            <th [appSort]="book_list" data-order="desc" data-name="category" scope="col">Category</th>
             <th>Details</th>
             <th>Check Out</th>
         </tr>

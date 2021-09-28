@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-booklist',
@@ -11,7 +12,7 @@ export class BooklistComponent implements OnInit {
 
   book_list: Book[]
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService, private userService: UserService) {
     this.book_list = bookService.getBooks()
    }
 
@@ -20,8 +21,11 @@ export class BooklistComponent implements OnInit {
 
   checkout(id: number)
   {
+    
+
     this.book_list[id].checkedOut = !this.book_list[id].checkedOut
-    this.bookService.book_list = this.book_list
+
+    this.userService.addBook(this.book_list[id])
   }
 
 }

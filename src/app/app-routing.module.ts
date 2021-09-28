@@ -5,6 +5,7 @@ import { BookViewComponent } from './book-view/book-view.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { HomeComponent } from './home/home.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'book/:id', component: BookViewComponent},
   {path: 'books', component: BooklistComponent},
   {path: 'addBook', component: AddBookComponent},
-  {path: 'editBook/:id', component: EditBookComponent}
+  {path: 'editBook/:id', component: EditBookComponent},
+  {path: 'user', component: UserProfileComponent}
 ];
 
 @NgModule({

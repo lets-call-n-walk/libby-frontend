@@ -11,11 +11,6 @@ import { BookService } from '../book.service';
 })
 export class AddBookComponent implements OnInit {
 
-  BookForm = new FormGroup({
-    title: new FormControl('', [Validators.required]),
-    author: new FormControl('', [Validators.required]),
-    category: new FormControl('', [Validators.required])
-  })
 
   newBook: Book = {title: "", author: "", category: "", checkedOut: false}
 

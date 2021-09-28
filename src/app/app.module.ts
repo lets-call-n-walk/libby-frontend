@@ -11,6 +11,8 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditBookComponent } from './edit-book/edit-book.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { SortDirective } from './directive/sort.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     BookViewComponent,
     BooklistComponent,
     AddBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    UserProfileComponent,
+    SortDirective
   ],
   imports: [
     BrowserModule,

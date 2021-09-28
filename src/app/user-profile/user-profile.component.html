@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2>Welcome {{getUser().user_name}}</h2>
+        </div>
+        <div class="col">
+            <h2>Books checked out</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Check In</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of getBooks() let id = index">
+                        <td>{{book.title}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.category}}</td>
+                        <td><button class="btn btn-outline-primary" (click)="CheckIn(id)">Check In</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
