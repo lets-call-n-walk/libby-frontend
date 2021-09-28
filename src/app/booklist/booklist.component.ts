@@ -10,6 +10,8 @@ import { UserService } from '../user.service';
 })
 export class BooklistComponent implements OnInit {
 
+  searchText: any
+
   book_list: Book[]
 
   constructor(private bookService: BookService, private userService: UserService) {

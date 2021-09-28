@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SortDirective } from './directive/sort.directive';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SortDirective } from './directive/sort.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
