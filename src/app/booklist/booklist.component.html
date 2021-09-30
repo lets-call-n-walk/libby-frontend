@@ -8,6 +8,7 @@
             <th [appSort]="book_list" data-order="desc" data-name="category" scope="col">Category</th>
             <th>Details</th>
             <th>Check Out</th>
+            <th>Hold</th>
         </tr>
     </thead>
     <tr *ngFor="let book of book_list | filter: searchText; let id = index">
@@ -16,5 +17,6 @@
         <td>{{book.category}}</td>
         <td><a routerLink="/book/{{id}}">Details</a></td>
         <td><button (click)="checkout(id)" *ngIf="!book.checkedOut" class="btn btn-outline-primary">Check Out</button></td>
+        <td><button (click)="hold(id)" *ngIf="book.checkedOut">Put on Hold</button></td>
     </tr>
 </table>

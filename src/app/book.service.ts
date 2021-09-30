@@ -6,7 +6,7 @@ import { Book } from './book';
 })
 export class BookService {
 
-  book_list: Book[] = [{title: "Harry Potter", author: "JK Rowling", category: "Fantasy", checkedOut: false}]
+  book_list: Book[] = [{title: "Harry Potter", author: "JK Rowling", category: "Fantasy", checkedOut: false, daysOut: 30}]
 
   getBooks()
   {
@@ -27,6 +27,8 @@ export class BookService {
   {
     this.book_list[id] = book
   }
+
+  
 
   constructor() { }
 }

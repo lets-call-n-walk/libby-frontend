@@ -5,6 +5,7 @@ export class User {
     password: String
     email: String
     bookList: Book[]
+    holdList: Book[]
 
     constructor(user_name: String, password: String, email: String)
     {
@@ -12,6 +13,7 @@ export class User {
         this.password = password
         this.email = email
         this.bookList = []
+        this.holdList = []
     }
 
 }

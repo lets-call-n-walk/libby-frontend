@@ -30,4 +30,9 @@ export class BooklistComponent implements OnInit {
     this.userService.addBook(this.book_list[id])
   }
 
+  hold(id: number)
+  {
+    this.userService.addHold(this.book_list[id])
+  }
+
 }

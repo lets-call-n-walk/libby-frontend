@@ -19,6 +19,11 @@ export class UserService {
     this.current_user.bookList.push(book)
   }
 
+  addHold(book: Book)
+  {
+    this.current_user.holdList.push(book)
+  }
+
   removeBook(id: number)
   {
     this.current_user.bookList.splice(id, 1)

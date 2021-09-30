@@ -25,6 +25,11 @@ export class UserProfileComponent implements OnInit {
     return this.userService.current_user.bookList
   }
 
+  getHold()
+  {
+    return this.userService.current_user.holdList
+  }
+
   CheckIn(id: number)
   {
     console.log("Checked in")
